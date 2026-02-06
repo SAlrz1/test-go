@@ -24,7 +24,7 @@ func (b *Book) Format() string {
 func BatchFormat[T Formatter](items []T) []string {
 	result := make([]string, 0, len(items))
 	for _, v := range items {
-		result = append(result, v.Format())
+		result = append(result, v.Format()) //批处理
 	}
 	return result
 }
